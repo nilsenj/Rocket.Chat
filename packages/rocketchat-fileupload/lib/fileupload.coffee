@@ -30,7 +30,7 @@ if UploadFS?
 
 		return false;
 
-	initFileStore = ->
+	@initFileStore = ->
 		Meteor.fileStore = new UploadFS.store.GridFS
 			collection: fileCollection
 			name: 'rocketchat_uploads'
@@ -42,11 +42,3 @@ if UploadFS?
 				console.log arguments
 			onRead: (fileId, file, req, res) ->
 				res.setHeader 'content-disposition', "attachment; filename=\"#{ encodeURIComponent(file.name) }\""
-
-	if Meteor.isServer
-		initFileStore()
-	else
-		Tracker.autorun (c) ->
-			if RocketChat.settings.subscription.ready()
-				initFileStore()
-				c.stop()

@@ -43,6 +43,7 @@ rocketchat:custom-oauth
 rocketchat:emojione
 rocketchat:favico
 rocketchat:file
+rocketchat:fileupload
 rocketchat:github-enterprise
 rocketchat:gitlab
 rocketchat:highlight

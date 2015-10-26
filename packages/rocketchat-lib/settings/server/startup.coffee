@@ -71,7 +71,6 @@ RocketChat.settings.add 'Message_KeepHistory', false, { type: 'boolean', group: 
 RocketChat.settings.add 'Message_MaxAllowedSize', 5000, { type: 'int', group: 'Message', public: true }
 RocketChat.settings.add 'Message_ShowFormattingTips', true, { type: 'boolean', group: 'Message', public: true }
 RocketChat.settings.add 'Message_AudioRecorderEnabled', true, { type: 'boolean', group: 'Message', public: true }
-RocketChat.settings.add 'Message_FileDownloadLoggedUsersOnly', true, { type: 'boolean', group: 'Message', public: true }
 
 RocketChat.settings.addGroup 'Meta'
 RocketChat.settings.add 'Meta_language', '', { type: 'string', group: 'Meta' }
